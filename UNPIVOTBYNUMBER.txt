@@ -1,0 +1,1 @@
+=LAMBDA(fields,number_times,CHOOSE(1+(COLUMNS(fields)=1)+(TYPE(number_times)=64)*2,CHOOSEROWS(fields,TOCOL(IF(SEQUENCE(,number_times),SEQUENCE(ROWS(fields))))),TOCOL(IF(SEQUENCE(,number_times),fields)),CHOOSEROWS(fields,TOCOL(IFS(number_times>=SEQUENCE(,MAX(number_times)),SEQUENCE(ROWS(fields))),2)),TOCOL(IFS(number_times>=SEQUENCE(,MAX(number_times)),fields),2)))
